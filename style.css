@@ -146,85 +146,44 @@ z-index:50;
 ===================== */
 
 
-#kitabWrapper{
-
-position:fixed;
-
-inset:0;
-
-display:none;
-
-background:rgba(0,0,0,.65);
-
-z-index:100;
-
-justify-content:center;
-
-align-items:center;
-
-touch-action:none;
-
-}
-
-
-
-/* KITAB ÖLÇÜ */
-
 .book-container{
 
+width:90vw;
+height:85vh;
 
-width:80vw;
-
-height:90vh;
-
-
-max-width:600px;
-
-max-height:800px;
-
+max-width:900px;
+max-height:650px;
 
 perspective:2000px;
 
-cursor:pointer;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
 
 }
-
-
 
 
 .book{
 
-
-width:75%;
-
+width:100%;
 height:100%;
 
 position:relative;
 
 transform-style:preserve-3d;
 
-transition:1s;
-
 }
-
 
 
 
 .page{
 
-
 position:absolute;
 
-width:75%;
-
+width:50%;
 height:100%;
 
+left:50%;
 
 transform-style:preserve-3d;
 
@@ -240,29 +199,24 @@ transition:1.2s cubic-bezier(.645,.045,.355,1);
 .front,
 .back{
 
-
 position:absolute;
 
-width:75%;
-
+width:100%;
 height:100%;
 
 
 backface-visibility:hidden;
 
-
 border-radius:5px 15px 15px 5px;
 
-
 overflow:hidden;
-
 
 box-shadow:0 5px 25px black;
 
 
 display:flex;
 
-flex-direction:column;
+flex-direction:row;
 
 }
 
@@ -280,15 +234,28 @@ transform:rotateY(180deg);
 
 .paper{
 
-
 background:#faf7f0;
 
-
-padding:20px;
-
+padding:25px;
 
 color:#332a24;
 
+overflow:auto;
+
+width:50%;
+
+height:100%;
+
+}
+
+
+
+
+.image-page{
+
+width:50%;
+
+height:100%;
 
 overflow:hidden;
 
@@ -300,13 +267,14 @@ overflow:hidden;
 .image-page img{
 
 
-width:75%;
+width:100%;
 
 height:100%;
 
 
 object-fit:cover;
 
+display:block;
 
 }
 
@@ -316,22 +284,21 @@ object-fit:cover;
 .cover-front-design{
 
 
-background:linear-gradient(135deg,#1d4039,#0f231f);
+width:100%;
 
+height:100%;
+
+background:linear-gradient(135deg,#1d4039,#0f231f);
 
 color:#ebdcb9;
 
+display:flex;
 
 justify-content:center;
 
-
 align-items:center;
 
-
 text-align:center;
-
-
-padding:20px;
 
 }
 
@@ -341,101 +308,23 @@ padding:20px;
 .cover-back-design{
 
 
-background:linear-gradient(135deg,#0f231f,#1d4039);
+width:100%;
 
+height:100%;
+
+background:linear-gradient(135deg,#0f231f,#1d4039);
 
 color:#ebdcb9;
 
+display:flex;
 
 justify-content:center;
 
-
 align-items:center;
-
 
 text-align:center;
 
-
-padding:20px;
-
 }
-
-
-
-
-h1{
-
-font-size:clamp(20px,6vw,35px);
-
-letter-spacing:2px;
-
-}
-
-
-
-h2{
-
-font-size:clamp(16px,5vw,25px);
-
-margin-bottom:15px;
-
-color:#4a3b32;
-
-border-bottom:1px solid #c9a054;
-
-}
-
-
-
-
-p{
-
-font-size:clamp(13px,3.5vw,17px);
-
-line-height:1.5;
-
-margin-bottom:10px;
-
-}
-
-
-
-
-.ornament{
-
-
-font-size:25px;
-
-color:#c9a054;
-
-margin:10px;
-
-}
-
-
-
-
-.quote{
-
-
-font-style:italic;
-
-border-left:3px solid #c9a054;
-
-padding-left:10px;
-
-}
-
-
-
-
-#p1{z-index:5;}
-
-#p2{z-index:4;}
-
-#p3{z-index:3;}
-
-#p4{z-index:2;}
 
 
 
@@ -448,66 +337,6 @@ transform:rotateY(-180deg);
 
 
 
-
-.nav-buttons{
-
-
-display:flex;
-
-gap:15px;
-
-margin-top:15px;
-
-z-index:200;
-
-}
-
-
-
-
-.btn{
-
-
-background:#1d4039;
-
-color:#ebdcb9;
-
-}
-
-
-
-
-
-.confetti{
-
-
-position:absolute;
-
-top:-20px;
-
-animation:fall 3s linear forwards;
-
-}
-
-
-
-@keyframes fall{
-
-
-to{
-
-transform:translateY(110vh) rotate(360deg);
-
-opacity:0;
-
-}
-
-}
-
-
-
-
-
 /* TELEFON */
 
 @media(max-width:520px){
@@ -515,13 +344,17 @@ opacity:0;
 
 .book-container{
 
-width:90vw;
+width:95vw;
 
-height:80vh;
+height:70vh;
 
-max-width:none;
+}
 
-max-height:none;
+
+
+.page{
+
+width:50%;
 
 }
 
@@ -535,51 +368,27 @@ padding:12px;
 
 
 
-.cover-front-design,
-.cover-back-design{
-
-padding:12px;
-
-}
-
-
-
-h1{
-
-font-size:22px;
-
-}
-
-
 h2{
 
-font-size:17px;
+font-size:15px;
 
 }
 
 
 p{
 
-font-size:13px;
+font-size:12px;
 
 }
 
 
 
-.ornament{
+.image-page img{
 
-font-size:18px;
-
-}
-
-
-
-.nav-buttons{
-
-position:fixed;
-
-bottom:15px;
+object-fit:cover;
 
 }
+
+
 
 }
