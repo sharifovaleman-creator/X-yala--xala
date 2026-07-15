@@ -36,7 +36,7 @@ color:white;
 
 .card{
 
-width:275px;
+width:250px;
 
 max-width:85vw;
 
@@ -108,28 +108,25 @@ white-space:nowrap;
 
 button{
 
-margin-top:5px;
+position:absolute;
+top:40px;
+left:50%;
+transform:translateX(-50%);
 
 padding:12px 25px;
-
 font-size:20px;
-
 border:none;
-
 border-radius:15px;
 
 background:rgba(255,255,255,.2);
-
 color:white;
 
 backdrop-filter:blur(10px);
 
 cursor:pointer;
-
 z-index:50;
 
 }
-
 /* =====================
 KITAB
 ===================== */
@@ -400,6 +397,11 @@ opacity:0;
 /* TELEFON */
 
 @media(max-width:760px){
+  .card{
+width:200px;
+}
+
+}
 
 .book-container{
 
