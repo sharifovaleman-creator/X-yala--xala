@@ -148,29 +148,23 @@ z-index:50;
 
 #kitabWrapper{
 
-display:none;
+    position:fixed;
+    inset:0;
 
-position:fixed;
+    display:none;
 
-inset:0;
+    background:rgba(0,0,0,.55);
 
-width:100%;
+    z-index:100;
 
-height:100%;
+    justify-content:center;
+    align-items:center;
 
-background:rgba(0,0,0,.55);
+    overflow-x:auto;   /* sağ-sol hərəkət */
+    overflow-y:hidden;
 
-z-index:100;
-
-justify-content:center;
-
-align-items:center;
-
-overflow:hidden;
-
+    touch-action:pan-x; /* mobil swipe */
 }
-
-
 
 /* KITAB ÖLÇÜ */
 
