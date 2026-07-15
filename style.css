@@ -7,7 +7,7 @@ padding:0;
 
 html,body{
 
-width:100%;
+width:120%;
 height:100%;
 
 overflow:hidden;
@@ -175,7 +175,7 @@ touch-action:none;
 .book-container{
 
 
-width:90vw;
+width:80vw;
 
 height:90vh;
 
@@ -203,7 +203,7 @@ align-items:center;
 .book{
 
 
-width:100%;
+width:120%;
 
 height:100%;
 
@@ -223,7 +223,7 @@ transition:1s;
 
 position:absolute;
 
-width:100%;
+width:120%;
 
 height:100%;
 
@@ -245,7 +245,7 @@ transition:1.2s cubic-bezier(.645,.045,.355,1);
 
 position:absolute;
 
-width:100%;
+width:120%;
 
 height:100%;
 
@@ -302,7 +302,7 @@ overflow:hidden;
 .image-page img{
 
 
-width:100%;
+width:120%;
 
 height:100%;
 
