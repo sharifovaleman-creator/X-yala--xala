@@ -4,7 +4,6 @@ margin:0;
 padding:0;
 }
 
-
 html,body{
 
 width:100%;
@@ -13,7 +12,6 @@ height:100%;
 overflow:hidden;
 
 }
-
 
 body{
 
@@ -34,8 +32,6 @@ color:white;
 
 }
 
-
-
 /* AVATAR */
 
 .card{
@@ -54,7 +50,6 @@ z-index:30;
 
 }
 
-
 .card img{
 
 width:100%;
@@ -62,7 +57,6 @@ width:100%;
 border-radius:20px;
 
 }
-
 
 .text{
 
@@ -85,7 +79,6 @@ opacity:0;
 transition:.8s;
 
 }
-
 
 #tapHint{
 
@@ -110,8 +103,6 @@ opacity:0;
 white-space:nowrap;
 
 }
-
-
 
 /* BUTTON */
 
@@ -139,12 +130,9 @@ z-index:50;
 
 }
 
-
-
 /* =====================
-        KITAB
+KITAB
 ===================== */
-
 
 #kitabWrapper{
 
@@ -162,28 +150,21 @@ justify-content:center;
 
 align-items:center;
 
-overflow:hidden;
-
 touch-action:none;
 
 }
-
-
 
 /* KITAB ÖLÇÜ */
 
 .book-container{
 
-
 width:90vw;
 
 height:90vh;
 
+max-width:400px;
 
-max-width:600px;
-
-max-height:800px;
-
+max-height:600px;
 
 perspective:2000px;
 
@@ -197,13 +178,9 @@ align-items:center;
 
 }
 
-
-
-
 .book{
 
-
-width:100%;
+width:110%;
 
 height:100%;
 
@@ -215,18 +192,13 @@ transition:1s;
 
 }
 
-
-
-
 .page{
-
 
 position:absolute;
 
-width:100%;
+width:110%;
 
 height:100%;
-
 
 transform-style:preserve-3d;
 
@@ -236,31 +208,22 @@ transition:1.2s cubic-bezier(.645,.045,.355,1);
 
 }
 
-
-
-
 .front,
 .back{
 
-
 position:absolute;
 
-width:100%;
+width:110%;
 
 height:100%;
 
-
 backface-visibility:hidden;
-
 
 border-radius:5px 15px 15px 5px;
 
-
 overflow:hidden;
 
-
 box-shadow:0 5px 25px black;
-
 
 display:flex;
 
@@ -268,102 +231,65 @@ flex-direction:column;
 
 }
 
-
-
-
 .back{
 
 transform:rotateY(180deg);
 
 }
 
-
-
-
 .paper{
-
 
 background:#faf7f0;
 
-
 padding:20px;
 
-
 color:#332a24;
-
 
 overflow:hidden;
 
 }
 
-
-
-
 .image-page img{
 
-
-width:100%;
+width:110%;
 
 height:100%;
 
-
 object-fit:cover;
 
-
 }
-
-
-
 
 .cover-front-design{
 
-
 background:linear-gradient(135deg,#1d4039,#0f231f);
-
 
 color:#ebdcb9;
 
-
 justify-content:center;
-
 
 align-items:center;
 
-
 text-align:center;
-
 
 padding:20px;
 
 }
-
-
-
 
 .cover-back-design{
 
-
 background:linear-gradient(135deg,#0f231f,#1d4039);
-
 
 color:#ebdcb9;
 
-
 justify-content:center;
-
 
 align-items:center;
 
-
 text-align:center;
-
 
 padding:20px;
 
 }
-
-
-
 
 h1{
 
@@ -372,8 +298,6 @@ font-size:clamp(20px,6vw,35px);
 letter-spacing:2px;
 
 }
-
-
 
 h2{
 
@@ -387,9 +311,6 @@ border-bottom:1px solid #c9a054;
 
 }
 
-
-
-
 p{
 
 font-size:clamp(13px,3.5vw,17px);
@@ -400,11 +321,7 @@ margin-bottom:10px;
 
 }
 
-
-
-
 .ornament{
-
 
 font-size:25px;
 
@@ -414,11 +331,7 @@ margin:10px;
 
 }
 
-
-
-
 .quote{
-
 
 font-style:italic;
 
@@ -428,9 +341,6 @@ padding-left:10px;
 
 }
 
-
-
-
 #p1{z-index:5;}
 
 #p2{z-index:4;}
@@ -439,20 +349,13 @@ padding-left:10px;
 
 #p4{z-index:2;}
 
-
-
-
 .flipped{
 
 transform:rotateY(-180deg);
 
 }
 
-
-
-
 .nav-buttons{
-
 
 display:flex;
 
@@ -464,11 +367,7 @@ z-index:200;
 
 }
 
-
-
-
 .btn{
-
 
 background:#1d4039;
 
@@ -476,12 +375,7 @@ color:#ebdcb9;
 
 }
 
-
-
-
-
 .confetti{
-
 
 position:absolute;
 
@@ -491,10 +385,7 @@ animation:fall 3s linear forwards;
 
 }
 
-
-
 @keyframes fall{
-
 
 to{
 
@@ -506,20 +397,15 @@ opacity:0;
 
 }
 
-
-
-
-
 /* TELEFON */
 
 @media(max-width:520px){
 
-
 .book-container{
 
-width:95vw;
+width:100vw;
 
-height:85vh;
+height:80vh;
 
 max-width:none;
 
@@ -527,24 +413,18 @@ max-height:none;
 
 }
 
-
-
 .paper{
 
-padding:12px;
+padding:10px;
 
 }
-
-
 
 .cover-front-design,
 .cover-back-design{
 
-padding:12px;
+padding:10px;
 
 }
-
-
 
 h1{
 
@@ -552,13 +432,11 @@ font-size:22px;
 
 }
 
-
 h2{
 
 font-size:17px;
 
 }
-
 
 p{
 
@@ -566,15 +444,11 @@ font-size:13px;
 
 }
 
-
-
 .ornament{
 
 font-size:18px;
 
 }
-
-
 
 .nav-buttons{
 
