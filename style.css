@@ -396,67 +396,104 @@ opacity:0;
 
 /* TELEFON */
 
+/* TELEFON */
 @media(max-width:760px){
-  .card{
-width:200px;
+
+body{
+    justify-content:center;
 }
+
+
+/* Avatar */
+.card{
+
+    width:200px;
+    max-width:65vw;
 
 }
 
+
+/* Avatar yazısı */
+.text{
+
+    font-size:18px;
+
+}
+
+
+/* Start düyməsi */
+button{
+
+    top:25px;
+
+    padding:10px 22px;
+
+    font-size:17px;
+
+}
+
+
+/* Kitab */
 .book-container{
 
-width:50vw;
+    width:60vw;
 
-height:40vh;
+    height:45vh;
 
-max-width:175px;
+    max-width:260px;
 
-max-height:300px;
+    max-height:380px;
 
 }
 
+
+/* Kitab səhifəsi */
 .paper{
 
-padding:8px;
+    padding:10px;
 
 }
 
-.cover-front-design,
-.cover-back-design{
 
-padding:8px;
-
-}
-
+/* Kitab başlıqları */
 h1{
 
-font-size:16px;
+    font-size:18px;
 
 }
+
 
 h2{
 
-font-size:14px;
+    font-size:15px;
 
 }
+
 
 p{
 
-font-size:10px;
+    font-size:11px;
 
 }
+
 
 .ornament{
 
-font-size:14px;
+    font-size:16px;
 
 }
 
+
+/* Kitab düymələri */
 .nav-buttons{
 
-position:fixed;
+    position:fixed;
 
-bottom:15px;
+    bottom:15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
 
 }
 
