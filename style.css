@@ -158,13 +158,13 @@ touch-action:none;
 
 .book-container{
 
-width:55vw;
+width:27.5vw;
 
-height:85vh;
+height:42.5vh;
 
-max-width:350px;
+max-width:175px;
 
-max-height:600px;
+max-height:300px;
 
 perspective:2000px;
 
@@ -399,7 +399,7 @@ opacity:0;
 
 /* TELEFON */
 
-@media(max-width:520px){
+@media(max-width:760px){
 
 .book-container{
 
