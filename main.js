@@ -349,7 +349,7 @@ card.style.zIndex="-1";
 
 
 /* =====================
- KITAB VƏRƏQLƏRİ
+   KITAB VƏRƏQLƏRİ
 ===================== */
 
 
@@ -367,8 +367,6 @@ document.getElementById("p3"),
 document.getElementById("p4")
 
 ];
-
-
 
 
 
@@ -481,6 +479,7 @@ pages[0].classList.remove("flipped");
 break;
 
 
+
 case 2:
 
 pages[1].classList.remove("flipped");
@@ -488,11 +487,13 @@ pages[1].classList.remove("flipped");
 break;
 
 
+
 case 3:
 
 pages[2].classList.remove("flipped");
 
 break;
+
 
 
 case 4:
@@ -510,7 +511,12 @@ break;
 
 
 
+/* =====================
+   KİTAB KLİK
+===================== */
 
+
+let isSwiping=false;
 
 
 book.addEventListener(
@@ -518,7 +524,107 @@ book.addEventListener(
 ()=>{
 
 
+if(!isSwiping){
+
 nextPage();
+
+}
+
+
+});
+
+
+
+
+
+
+/* =====================
+   MOBİL SWIPE
+===================== */
+
+
+let touchStartX=0;
+
+let touchEndX=0;
+
+
+
+kitabWrapper.addEventListener(
+"touchstart",
+(e)=>{
+
+
+touchStartX=e.changedTouches[0].screenX;
+
+
+isSwiping=false;
+
+
+},
+{passive:true}
+
+);
+
+
+
+
+
+kitabWrapper.addEventListener(
+"touchmove",
+(e)=>{
+
+
+let moveX=e.changedTouches[0].screenX;
+
+
+
+if(Math.abs(moveX-touchStartX)>20){
+
+isSwiping=true;
+
+}
+
+
+},
+{passive:true}
+
+);
+
+
+
+
+
+
+kitabWrapper.addEventListener(
+"touchend",
+(e)=>{
+
+
+touchEndX=e.changedTouches[0].screenX;
+
+
+
+let distance=touchEndX-touchStartX;
+
+
+
+// sola sürüşdür
+
+if(distance < -50){
+
+nextPage();
+
+}
+
+
+
+// sağa sürüşdür
+
+if(distance > 50){
+
+prevPage();
+
+}
 
 
 });
